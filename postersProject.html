@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Harlen B | Posters</title>
+  <meta name="description" content="Project page for Capilano University Posters.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="work-pages-images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="work-pages-images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="work-pages-images/favicon-16x16.png">
+  <link rel="manifest" href="work-pages-images/site.webmanifest">
+  <link rel="mask-icon" href="work-pages-images/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/b12b87fd95.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section class="hero hero-project-5">
+    <header class="hero-header">
+      <ul class="branding-navigation">
+        <li class="logo"><a href="index.html"><img src="work-pages-images/HarlenB-Professional-Logo.png" /></a></li>
+      </ul>
+      <ul class="hero-footer-navigation">
+        <li><a href="https://www.instagram.com/monstrous.creations/?hl=en" target="_blank" class="custom-navigation"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://xmonster1.artstation.com/" target="_blank" class="custom-navigation"><i class="fa-brands fa-artstation"></i></a></li>
+        <li><a href="mailto:harlenbertrand@outlook.com" class="custom-navigation"><i class="fa-regular fa-envelope"></i></a></li>
+      </ul>
+    </header>
+    <div class="hero-headline-wrapper">
+      <img id="background-video" src="project-images/Posters/Posters-Yuko-Hero.jpg" alt="Yuko Shimizu Portrait">
+    </div>
+  </section>
+  <div class="project-wrapper">
+    <aside class="project-aside">
+      <div class="project-info">
+        <h2 class="stroke-shadow">Various Posters</h2>
+        <p class="stroke-shadow">Various posters completed for Capilano University
+        </p>
+      </div>
+      <ul class="project-navigation">
+        <li class="arrow"><a href="motionGraphicsProject.html" class="navigation-arrow"><i class="fas fa-arrow-left fa-2x"></i></a></li>
+        <li class="arrow"><a href="environmentProject.html" class="navigation-arrow"><i class="fas fa-arrow-right fa-2x"></i></a></li>
+      </ul>
+    </aside>
+    <main class="project-details">
+      <div class="project-seperation"><h2>Mock Advertisement for Disney+</h2>
+        <h3>It is meant to show the variou smediums that viewers can watch Disney+ on such as tablets, phones, and computers.</h3></div>
+      <div class="project-image"><img src="project-images/Posters/Posters-Disney.jpg"></div>
+      <div class="project-seperation"><h2>Illustrated Poster for Yuko Shimizu</h2>
+        <h3>Meant for a hypothetical art exhibit</h3></div>
+      <div class="project-image"><img src="project-images/Posters/Posters-Retrospective.jpg"></div>
+      <div class="project-seperation"><h2>Mock modern advertisement for Total Recall</h2></div>
+      <div class="project-image"><img src="project-images/Posters/Posters-Total-Recall.jpg"></div>
+      <div class="project-seperation"><h2>Mock advertisement for the EDM Canada Music Festival</h2></div>
+      <div class="project-image"><img src="project-images/Posters/Posters-EDM-Canada.jpg"></div>
+    </main>
+  </div>
+
+  <hr style="width: 80%; text-align: left; margin-left: 20;">
+
+  <ul class="global-footer">
+    <li><a href="https://www.instagram.com/monstrous.creations/?hl=en" target="_blank" class="custom-navigation"><i class="fa-brands fa-instagram"></i></a></li>
+    <li><a href="https://xmonster1.artstation.com/" target="_blank" class="custom-navigation"><i class="fa-brands fa-artstation"></i></a></li>
+    <li><a href="mailto:harlenbertrand@outlook.com" class="custom-navigation"><i class="fa-regular fa-envelope"></i></a></li>
+  </ul>
+
+  <ul class="global-footer-center">
+    <li><a href="javascript:void(0)" class="toggleGhost colored-link" id="btnGhost value=" Hide Ghost" onclick="ShowHideDiv(this)">&copy; Monstrous Creations</a></li>
+  </ul>
+
+  <div id="myID" class="bottomMenu hide"><a href="#">Back to top</a></div>
+
+  <div id="ghostanimation" class="ghost"><img src="OldManWalker.png" /></div>
+
+  <script type="text/javascript">
+    function ShowHideDiv(btnGhost) {
+      var GhostStyle = document.getElementById("ghostanimation");
+      if (btnGhost.value == "Hide Ghost") {
+        GhostStyle.style.display = "none";
+        btnGhost.value = "Play Ghost";
+      } else {
+        GhostStyle.style.display = "block";
+        btnGhost.value = "Hide Ghost";
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    myID = document.getElementById("myID");
+
+    var myScrollFunc = function () {
+      var y = window.scrollY;
+      if (y >= 800) {
+        myID.className = "bottomMenu show"
+      } else {
+        myID.className = "bottomMenu hide"
+      }
+    };
+
+    window.addEventListener("scroll", myScrollFunc);
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Harlen Portfolio 2022</title>
+  <meta name="description" content="About page for Harlen Bertrand.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="work-pages-images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="work-pages-images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="work-pages-images/favicon-16x16.png">
+  <link rel="manifest" href="work-pages-images/site.webmanifest">
+  <link rel="mask-icon" href="work-pages-images/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <script src="https://kit.fontawesome.com/d300c2ea15.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/b12b87fd95.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section class="hero">
+    <header class="hero-header">
+      <ul class="branding-navigation">
+        <li class="logo"><a href="index.html"><img src="work-pages-images/HarlenB-Professional-Logo.png" /></a></li>
+      </ul>
+      <ul class="hero-footer-navigation">
+        <li><a href="https://www.instagram.com/monstrous.creations/?hl=en" class="custom-navigation"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://xmonster1.artstation.com/" target="_blank" class="custom-navigation"><i class="fa-brands fa-artstation"></i></a></li>
+        <li><a href="mailto:harlenbertrand@outlook.com" target="_blank" class="custom-navigation"><i class="fa-regular fa-envelope"></i></a></li>
+      </ul>
+    </header>
+    <div class="hero-headline-wrapper-about">
+      <h1>Harlen Bertrand</h1>
+      <h2>Character Designer & Storyteller</h2>
+      <p class="stroke-shadow">I bring multiple disciplines to storytelling such as character design, writing, video editing, and 3D generalization. As a storyteller, I like to transport audiences to worlds filled with drama, action, and sometimes even horror.<br><br>As a recent graduate of <a href="https://www.capilanou.ca/programs--courses/search--select/explore-our-areas-of-study/fine--applied-arts/idea-school-of-design/" target="_blank" class="toggleGhost colored-link">Capilano University's IDEA program</a>, I am eager to get to work and help bring your stories and games to life!</p>
+
+      <h2>Awards &amp; Recognition</h2>
+      <a href="#">Irving K. Barber Scholarship</a>
+      <a
+        href="https://www.ideaschoolofdesign.com/home/2021/9/harlen-betrand-idea-grad-2023-wins-the-2021-gdc-foundation-cheryl-lynn-rutledge-northern-indigenous-student-award">GDC
+        Foundation Cheryl Lynn Rutledge Northern Indigenous Student Award</a>
+      <a href="#">Capilano University Dean's List</a>
+      <video id="background-video-about" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+        <source src="https://www.dropbox.com/s/qgkftptfanst3al/harlen-face.mp4?raw=1" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <hr style="width: 80%; text-align: left; margin-left: 20;">
+
+  <ul class="global-footer">
+    <li><a href="https://www.instagram.com/monstrous.creations/?hl=en" target="_blank" class="custom-navigation"><i class="fa-brands fa-instagram"></i></a></li>
+    <li><a href="https://xmonster1.artstation.com/" target="_blank" class="custom-navigation"><i class="fa-brands fa-artstation"></i></a></li>
+    <li><a href="mailto:harlenbertrand@outlook.com" class="custom-navigation"><i class="fa-regular fa-envelope"></i></a></li>
+  </ul>
+
+  <ul class="global-footer-center">
+    <li><a href="javascript:void(0)" class="toggleGhost colored-link" id="btnGhost value=" Hide Ghost" onclick="ShowHideDiv(this)">&copy; Monstrous Creations</a></li>
+  </ul>
+
+  <div id="myID" class="bottomMenu hide"><a href="#">Back to top</a></div>
+
+  <div id="ghostanimation" class="ghost"><img src="OldManWalker.png" /></div>
+
+  <script type="text/javascript">
+    function ShowHideDiv(btnGhost) {
+      var GhostStyle = document.getElementById("ghostanimation");
+      if (btnGhost.value == "Hide Ghost") {
+        GhostStyle.style.display = "none";
+        btnGhost.value = "Play Ghost";
+      } else {
+        GhostStyle.style.display = "block";
+        btnGhost.value = "Hide Ghost";
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    myID = document.getElementById("myID");
+
+    var myScrollFunc = function () {
+      var y = window.scrollY;
+      if (y >= 800) {
+        myID.className = "bottomMenu show"
+      } else {
+        myID.className = "bottomMenu hide"
+      }
+    };
+
+    window.addEventListener("scroll", myScrollFunc);
+  </script>
+</body>
+
+</html>
