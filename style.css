@@ -524,20 +524,23 @@ p {
 
 /* Small devices (phones, 320px and up) */
 @media (max-width: 600px) {
-  
-}
-
-/* Medium devices (tablets, 481px and up) */
-@media (min-width: 600px) {
-  
-}
-
-/* Small screens (laptops, 769px and up) */
-@media (min-width: 768px) {
   .project-hero-title {display: block;}
   .project-hero-wrapper {
     height: 100vh;
     display: flex;}
+}
+
+/* Medium devices (tablets, 481px and up) */
+@media (min-width: 600px) {
+  .project-hero-title {display: block;}
+  .project-hero-wrapper {
+    height: 100vh;
+    display: flex;}
+}
+
+/* Small screens (laptops, 769px and up) */
+@media (min-width: 768px) {
+  
 }
 
   /* Large devices (large desktops, 1025px and up)*/
