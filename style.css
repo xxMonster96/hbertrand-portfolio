@@ -523,17 +523,17 @@ p {
 */
 
 /* Small devices (phones, 320px and up) */
-@media (min-width: 320px) {
+@media (max-width: 600px) {
   
 }
 
 /* Medium devices (tablets, 481px and up) */
-@media (min-width: 481px) {
+@media (min-width: 600px) {
   
 }
 
 /* Small screens (laptops, 769px and up) */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .project-hero-title {display: block;}
   .project-hero-wrapper {
     height: 100vh;
@@ -541,7 +541,7 @@ p {
 }
 
   /* Large devices (large desktops, 1025px and up)*/
-@media (min-width: 1025px) {
+@media (min-width: 992px) {
   h1 {
     font-size: 4.275rem;
   }
@@ -698,4 +698,4 @@ p {
 }
 
 /* XX-Large devices (TV screens, 1201px and up) */
-@media (min-width: 1201px) {}
+@media (min-width: 1200px) {}
