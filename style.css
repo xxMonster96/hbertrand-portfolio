@@ -523,10 +523,17 @@ p {
 */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+  .project-hero-title {display: block;}
+  .project-hero-wrapper {
+    height: 100vh;
+    display: flex;}
+}
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+  
+}
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -558,7 +565,9 @@ p {
   }
 
   .branding-section {width: 50%;}
-.hero-title-section {width: 50%; }
+.hero-title-section {width: 50%;}
+.project-hero-wrapper {display: block;}
+.project-hero-title {display: block;}
 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
