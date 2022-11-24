@@ -9,13 +9,9 @@
 */
 
 @import url("https://fonts.googleapis.com/css?family=Hepta+Slab|Staatliches&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
 @import url('make-something-fly.css');
-@import url('animated-gradient.css');
-@import url('xtext-stroke.css');
+@import url('text-stroke.css');
 @import url('stroke-shadow.css');
 @import url('scroll-to-top.css');
 /*
@@ -79,7 +75,6 @@ html {
   --color-darkest: hsla(var(--base-color), 1%, 15%, 100%);
 }
 
-
 body {
   font-family: var(--body-typeface);
   color: var(--primary-text-color);
@@ -87,10 +82,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-::selection {
-  /*background: hotpink;*/
 }
 
 /* Making all images responsive */
@@ -136,7 +127,7 @@ h3 {
   margin-bottom: 1rem;
   line-height: 1.3;
   color: white;
-  font-weight: 200;
+  font-weight: 100;
 }
 
 /* Hyperlink Styles */
@@ -148,7 +139,6 @@ a {
 a:hover {
   color: var(--hover-color);
   text-shadow: 0px 0px 5px #2784db;
-
 }
 
 a:active {
@@ -188,13 +178,10 @@ a:active {
   background-position: center center;
 }
 
-
 p {
   line-height: 1.3;
   margin-bottom: 1rem;
 }
-
-
 
 /* Work Page Layout
 
@@ -224,9 +211,6 @@ p {
   grid-gap: 0;
   /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
 }
-
-
-
 
 /* Optional – Sizing the work page images */
 /* figure {
@@ -361,12 +345,6 @@ p {
   width: 100%;
   height: auto;
   object-fit: cover;
-  /* position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1; */
 }
 
 #background-video-about {
@@ -503,15 +481,13 @@ p {
 /* Main Project Image Area */
 .project-details {
   width: 100%;
-  /* background-image: linear-gradient(-225deg,
-      rgb(87, 143, 196) 0%, 
-      #000000 100%); */
   padding: 1rem;
 }
 
 .project-seperation {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  padding-left: 1rem;
 }
 
 /*
@@ -744,12 +720,6 @@ p {
     align-self: end;
   }
   
-  /* Padding around work grid and project page
-  .portfolio,
-  .project-wrapper {
-    padding: .5rem
-  }*/
-  
   /* Project Page Flex Direction on Large Devices */
   .project-wrapper {
     flex-direction: row;
@@ -781,4 +751,6 @@ p {
 }
 
 /* XX-Large devices (TV screens, 1200px and up) */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+
+}
