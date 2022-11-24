@@ -546,15 +546,31 @@ p {
 
 /* Medium devices (tablets, 600px and up) */
 @media (min-width: 600px) {
-  .project-hero-title {display: block;}
+  .project-hero-title {
+    display: block;
+  }
+
   .project-hero-wrapper {
     height: 100vh;
     display: flex;
+  }
+
+  h1 {
+    font-size: 2.625rem;
+  }
+
+  h2 {
+    font-size: 1.725rem;
   }
 }
 
 /* Small screens (laptops, 768px and up) */
 @media (min-width: 768px) {
+  
+}
+
+  /* Large devices (large desktops, 992px and up)*/
+@media (min-width: 992px) {
   h1 {
     font-size: 4.275rem;
   }
@@ -709,11 +725,6 @@ p {
     height: 100%;
     display: inline;
   }
-}
-
-  /* Large devices (large desktops, 992px and up)*/
-@media (min-width: 992px) {
-  
 }
 
 /* XX-Large devices (TV screens, 1200px and up) */
