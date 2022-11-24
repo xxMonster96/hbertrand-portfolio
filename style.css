@@ -526,17 +526,21 @@ p {
 @media (max-width: 600px) {
   .project-hero-title {
     display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .project-hero-wrapper {
     display: none;
   }
 
   h1 {
-    font-size: 1.625rem;
+    font-size: 2.625rem;
   }
 
   h2 {
-    font-size: 0.725rem;
+    font-size: 1.725rem;
   }
 }
 
