@@ -273,6 +273,7 @@ p {
   width: 100%;
   /* text-align: right; */
 }
+
 .branding-section {
   width: 100%; 
   padding: 1rem;}
@@ -285,6 +286,17 @@ p {
   flex-direction: column;
 }
 
+.project-hero-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.project-hero-title {
+  position: absolute;
+  top: 85%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
 
 .hero-headline-wrapper-about {
   display: flex;
