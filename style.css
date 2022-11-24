@@ -524,10 +524,20 @@ p {
 
 /* Small devices (phones, 320px and up) */
 @media (max-width: 600px) {
-  .project-hero-title {display: block;}
+  .project-hero-title {
+    display: block;
+  }
   .project-hero-wrapper {
-    height: 100vh;
-    display: flex;}
+    display: none;
+  }
+
+  h1 {
+    font-size: 1.625rem;
+  }
+
+  h2 {
+    font-size: 0.725rem;
+  }
 }
 
 /* Medium devices (tablets, 481px and up) */
