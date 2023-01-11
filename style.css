@@ -154,21 +154,17 @@ a:active {
   /* Tap on mobile */
 }
 
-.navigation-arrow {
-  color: white;
-}
-
 .navigation-arrow:link {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #555555;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: #006b92;
   color: transparent;
 }
 
 .navigation-arrow:active,
 .navigation-arrow:hover {
-  color: #5200FF;
+  color: #00bbff;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #5200FF;
+  -webkit-text-stroke-color: #00bbff;
 }
 
 .colored-link {
@@ -209,7 +205,6 @@ p {
 .portfolio,
 .project-wrapper {
   padding: .25rem;
-  background-color: #000;
 }
 
 /* Defining the work page grid */
@@ -239,7 +234,7 @@ p {
 */
 
 .hero {
-  min-height: 80vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
 }
@@ -288,24 +283,19 @@ p {
   align-items: left; 
   justify-content: left; 
   flex-direction: column;
-  background-color: green;
 }
 
-.project-hero-wrapper {
-  position: relative;
-  text-align: center;
+.project-hero-container {
+  z-index: -1;
 }
 
 .about-hero-wrapper {
+  min-width: 1920px;
   position: relative;
   text-align: center;
 }
 
 .project-hero-title {
-  position: absolute;
-}
-
-.about-hero-title {
   position: absolute;
 }
 
@@ -342,13 +332,6 @@ p {
 
 /* Custom Hero Backgrounds */
 
-.hero-project-1 {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  background: url(project-images/angels/AngelsPreviewBase-hevc-safari-hb.mp4);
-}
-
 #background-video {
   width: 100%;
   height: auto;
@@ -359,6 +342,7 @@ p {
   width: 100%;
   height: auto;
   object-fit: cover;
+  opacity: 50%;
 }
 
 /* Global Footer
@@ -446,51 +430,31 @@ p {
 */
 
 .project-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: var(--alt-background-color);
+  flex: 1;
 }
 
-/* Sidebar */
-.project-aside {
-  width: 100%;
-  color: white;
-  background: black;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
+.project-grid {
+  display: grid;
+  /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
 }
 
 .project-navigation {
   display: flex;
   flex-direction: row;
-  flex: 1;
-  align-items: flex-end;
+  padding: 0 2rem 3rem 2rem;
 }
 
-.arrow {
-  padding-right: 1rem;
+.arrow:last-of-type {
+  margin-left: auto;
 }
 
 .project-image {
-  font-size: 12rem;
-  /* min-height: 100vh; */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0% 2% 0% 2%;
+  padding: 2%;
 }
 
 .about-image {
   width: 50vw;
-}
-
-
-/* Main Project Image Area */
-.project-details {
-  width: 100%;
-  padding: 1rem;
 }
 
 .project-seperation {
@@ -515,7 +479,7 @@ p {
   .project-hero-title {
     display: block;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -525,11 +489,56 @@ p {
   }
 
   .about-hero-wrapper {
+    visibility: hidden;
+  }
+
+  .about-hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 50%;
+  }
+
+  h1 {
+    font-size: 2.625rem;
+  }
+
+  h2 {
+    font-size: 1.725rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+
+  .global-footer {
+    padding: 4rem 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Medium devices (tablets, 600px and up) */
+@media (min-width: 600px) {
+  .project-hero-title {
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .project-hero-wrapper {
     display: none;
   }
 
   .about-hero-title {
-    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -544,58 +553,25 @@ p {
   h2 {
     font-size: 1.725rem;
   }
-}
 
-/* Medium devices (tablets, 600px and up) */
-@media (min-width: 600px) {
-  .project-hero-title {
-    display: block;
-    position: absolute;
-    top: 75%;
-    left: 35%;
-    transform: translate(-50%, -50%);
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
   }
 
-  .about-hero-title {
-    display: block;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 50%;
+  .project-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
   }
 
-  .project-hero-wrapper {
-    height: 100vh;
-    display: flex;
+  .global-footer {
+    padding: 4rem 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-
-  .about-hero-wrapper {
-    height: 100vh;
-    display: flex;
-    filter: opacity(25%);
-  }
-
-  .background-video-about {
-    color: rgba(0, 0, 0, 0.5);
-  }
-
-  h1 {
-    font-size: 2.625rem;
-  }
-
-  h2 {
-    font-size: 1.725rem;
-  }
-}
-
-/* Small screens (laptops, 768px and up) */
-@media (min-width: 768px) {
-  
 }
 
   /* Large devices (large desktops, 992px and up)*/
-@media (min-width: 992px) {
+@media (min-width: 1350px) {
   h1 {
     font-size: 4.275rem;
   }
@@ -612,10 +588,6 @@ p {
     width: 4rem;
   }
   
-  .hero {
-    min-height: 100vh;
-  }
-  
   .hero-headline-wrapper {
     flex-direction: row;
   }
@@ -628,20 +600,23 @@ p {
     width: 50%;
   }
 
+  .project-hero-container {
+    height: 5vh;
+  }
+
   .project-hero-wrapper {
-    display: block;
-    height: 100%;
+    height: 50vh;
+    display: flex;
   }
 
   .about-hero-wrapper {
-    display: block;
-    height: 100%;
+    visibility: visible;
     filter: opacity(100%);
   }
 
   .project-hero-title {
     display: block;
-    top: 85%;
+    top: 30%;
     left: 25%;
     transform: translate(-50%, -50%);
   }
@@ -655,7 +630,17 @@ p {
     position: relative;
     text-align: center;
   }
-  
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0;
+  }
+
+  .project-grid img {
+    width: 100%;
+    height: auto;
+  }
+
   .work-page-grid-item a div {
     width: 100%;
     height: 100%;
@@ -689,6 +674,17 @@ p {
   .work-page-grid-item>a:hover img,
   .work-page-grid-item>a:active img {
     filter: grayscale(100);
+  }
+
+  .project-page-grid-item {
+    width: 100%;
+    height: 100%;
+    word-wrap: break-word;
+    z-index: 5;
+    position: absolute;
+    background-color: rgba(22, 27, 47, 0.5);
+    top: 0%;
+    display: none;
   }
   
   .global-footer,
@@ -729,37 +725,13 @@ p {
     align-self: end;
   }
   
-  /* Project Page Flex Direction on Large Devices */
-  .project-wrapper {
-    flex-direction: row;
-  }
-  
-  
-  /* Sidebar on Large Devices */
-  .project-aside {
-    width: 35%;
-    height: 50vh;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 5vh;
-  }
-  
   .about-hero-title {
     display: block;
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 45%;
     transform: translate(-50%, -50%);
-    max-width: 25%;
+    max-width: 10em;
   }
   
-  /* Main Project Image Area on Large Devices */
-  .project-details {
-    width: 65%;
-  }
-}
-
-/* XX-Large devices (TV screens, 1200px and up) */
-@media (min-width: 1200px) {
-
 }
