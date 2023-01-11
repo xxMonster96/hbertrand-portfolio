@@ -290,7 +290,7 @@ p {
 }
 
 .about-hero-wrapper {
-  min-width: 1920px;
+  min-height: 720px;
   position: relative;
   text-align: center;
 }
