@@ -92,9 +92,15 @@ img, video {
   /* Removes the gap/space in inline elements for text descenders. */
   object-fit: contain;
   /* This is optional. Also try cover or leave out entirely. */
-
 }
 
+iframe {
+  max-width: 100%;
+  vertical-align: top;
+  /* Removes the gap/space in inline elements for text descenders. */
+  object-fit: contain;
+  /* This is optional. Also try cover or leave out entirely. */
+}
 
 
 /* Global & Mobile Typography 
