@@ -303,6 +303,7 @@ p {
 
 .project-hero-title {
   position: absolute;
+  padding-top: 5%;
 }
 
 .hero-icon {
@@ -457,6 +458,7 @@ p {
 .project-image {
   display: flex;
   padding: 2%;
+  max-height: 100vh;
 }
 
 .about-image {
@@ -623,12 +625,12 @@ p {
   .project-hero-title {
     display: block;
     top: 30%;
-    left: 25%;
+    left: 30%;
     transform: translate(-50%, -50%);
   }
   
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-gap: 0;
   }
   
