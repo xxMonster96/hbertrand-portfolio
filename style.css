@@ -441,7 +441,8 @@ p {
 }
 
 .project-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
 }
 
@@ -456,9 +457,16 @@ p {
 }
 
 .project-image {
-  display: flex;
-  padding: 2%;
-  max-height: 100vh;
+  flex: 50%;
+  padding: 0.5%;
+  max-width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image img {
+  vertical-align: middle;
+  width: 100%;
 }
 
 .about-image {
@@ -467,8 +475,9 @@ p {
 
 .project-seperation {
   padding-top: 2rem;
-  padding-bottom: 3rem;
-  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 /*
@@ -526,6 +535,11 @@ p {
     grid-gap: 0;
   }
 
+  .project-image {
+    flex: 100%;
+    max-width: 100%;
+  }
+
   .global-footer {
     padding: 4rem 4rem;
     grid-template-columns: 1fr 1fr 1fr;
@@ -570,6 +584,13 @@ p {
   .project-grid {
     grid-template-columns: 1fr;
     grid-gap: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .project-image {
+    flex: 50%;
+    max-width: 100%;
   }
 
   .global-footer {
