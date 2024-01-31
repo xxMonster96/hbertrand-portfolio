@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login page</title>
+</head>
+<body>
+<form>
+    <label for="pswd">Enter the provided password: </label>
+    <input type="password" id="pswd">
+    <input type="button" value="Submit" onclick="checkPswd();" />
+</form>
+<!--Function to check password the already set password is admin-->
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "Fire Narration";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="https://mega.nz/file/68kDBbxa#cBo5RfTyiW3KVTwBmg355Em6dG_m8WVbQP07Rl8zhS8";
+        }
+        else{
+            alert("Passwords do not match.");
+        }
+    }
+</script>
+</body>
+</html>
