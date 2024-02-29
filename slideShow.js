@@ -1,10 +1,6 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-function loadFirst() {
-  currentSlide(1);
-}
-
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
