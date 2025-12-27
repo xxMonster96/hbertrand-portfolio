@@ -498,6 +498,10 @@ p {
 
 /* Small devices (phones, 600px and down) */
 @media (max-width: 600px) {
+  .content-footer-navigation {
+  display: none;
+  }
+
   .project-hero-title {
     display: block;
     position: absolute;
@@ -573,6 +577,14 @@ p {
     min-width: 80%;
   }
 
+  .content-footer-navigation {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 30px;
+  padding: 1rem;
+  }
+
   h1 {
     font-size: 2.625rem;
   }
@@ -606,6 +618,14 @@ p {
 
   /* Large devices (large desktops, 992px and up)*/
 @media (min-width: 1350px) {
+  .content-footer-navigation {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 30px;
+  padding: 1rem;
+  }
+
   h1 {
     font-size: 4.275rem;
   }
