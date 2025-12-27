@@ -515,7 +515,7 @@ p {
   }
 
   .about-hero-wrapper {
-    visibility: hidden;
+    display: none;
   }
 
   .about-hero-title {
@@ -552,6 +552,10 @@ p {
   .global-footer {
     padding: 4rem 4rem;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .resume {
+    display: none;
   }
 }
 
